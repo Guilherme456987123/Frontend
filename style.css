@@ -1,3 +1,7 @@
+body{
+    margin: 0%;
+}
+
 .header{
 background-color: green;
 height: 150px;
@@ -11,8 +15,24 @@ justify-content: space-between;
     font-size: 24px;
     color: aliceblue;
     font-weight: bolder;
+    margin-right: 20px;
+    text-shadow: 5px 5px 5px: color black;
 }
 
-.imagem{
-    
+.logoico{
+    width: 30%;
+}
+
+.propaganda{
+    height: 500px;
+    background-color: black;
+    background: url("formiga.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.logo-texto{
+    width: 30%
+  background-position: 50% 
 }
