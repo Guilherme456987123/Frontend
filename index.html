@@ -1,60 +1,89 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+    <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content=width=device-width, initial-scale="1.0">
-    <title>y</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo CSS externo -->
 </head>
 <body>
-<div class ="header">
-<div class="logo">
-    <img class= "logoico" src="besouro.png"
-</div>
-     </div>
-     
-     
-     <div class="menu">
-        <span>Home |</span>
-        <span>Produtos |</span>
-        <span>Sobre</span>
-     </div>
+    <header>
+        <h1>Systembug</h1>
+        <style>
+            header{
+                color: blue;
+            }
+        </style>
+        </div>
+        <nav>
+            <div class="menu-icon">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="menu">
+                <li><a href="#">Menu 1</a></li>
+                <li><a href="#">Menu 2</a></li>
+                <li><a href="#">Menu 3</a></li>
+            </ul>
+        </nav>
+    </header>
+<!-- banner -->
+    <div class="slider-container">
+        <div class="slider">
+            <!-- imganes -->
+            <img src="imgs/banner1.jfif" alt="Banner 1">
+            <img src="imgs/banner2.jfif" alt="Banner 2">
+            <img src="imgs/banner3.jfif" alt="Banner 3">
+        </div>
     </div>
-     
+    <section class="products">
+        <div class="product">
+            <img src="Mantis.jpg" alt="Mantis">
+            <h3>Produto 1</h3>
+            <p>Preço: R$ 5,00</p>
+            <button>Comprar</button>
+        </div>
+        <div class="product">
+            <img src="Escorpião2.jpg" alt="Scorpion">
+            <h3>Produto 2</h3>
+            <p>Preço: R$ 15,00</p>
+            <button>Comprar</button>
+        </div>
+        <div class="product">
+            <img src="besouro1.jpg" alt="Beatle">
+            <h3>Produto 3</h3>
+            <p>Preço: R$ 10,00</p>
+            <button>Comprar</button>
+        </div>
+        <div class="product">
+            <img src="Aranha.webp" alt="Produto 4">
+            <h3>Produto 4</h3>
+            <p>Preço: R$ 30,00</p>
+            <button>Comprar</button>
+        </div>
+    </section>
 
-<div class="propaganda"></div>
-     <div class="voltar"></div>
-     <div class="avancar"></div>
-</div>
-<div class="produtos">
-    <div class="linha1">
-    <div class="p1"></div>
-    <div class="p2"></div>
-    <div class="p3"></div>
-    <div class="p4"></div>
-    </div>
-      
-    <div class="linha2">
-        <div class="p5"></div>
-    <div class="p6"></div>
-    <div class="p7"></div>
-    <div class="p8"></div>
-    </div>  
+    <footer>
+        <div class="footer-section">
+            <h2>Sobre</h2>
+            <p>Um site criado para vender insetos e seus respectivos acessórios.</p>
+        </div>
+        <div class="footer-section">
+            <h2>Mapa</h2>
+            <!-- Coloque seu código para incorporar um mapa aqui -->
+        </div>
+        <div class="footer-section">
+            <h2>Cadastre-se</h2>
+            <form>
+                <input type="text" placeholder="Nome">
+                <input type="email" placeholder="E-mail">
+                <button>Cadastrar</button>
+            </form>
+        </div>
+    </footer>
 
-    <div class="linha3">
-        <div class="p9"></div>
-    <div class="p10"></div>
-    <div class="p11"></div>
-    <div class="p12"></div>
-
-    </div>
- </div>
- <div class="footer">
-    <div class="sobre"></div>
-    <div class="mapa"></div>
-    <div class="cadastro"></div>
- </div>
-
- <script src="js.js"></script>
+    <script src="script.js"></script> <!-- Link para o arquivo JavaScript externo -->
 </body>
 </html>
+<div class= "logo">
+    <img class="img/logo" src="logoico"

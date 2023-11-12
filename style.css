@@ -1,38 +1,228 @@
-body{
-    margin: 0%;
+/* Reset de estilos para remover margens e preenchimento padrão */
+body, ul {
+    margin: 0;
+    padding: 0;
 }
 
-.header{
-background-color: green;
-height: 150px;
-width: 1215px;
-display: flex;
-align-items: center;
-justify-content: space-between;
+/* Estilos globais */
+body {
+    font-family: Arial, sans-serif;
 }
-.menu{
-    font-family: Verdana;
+
+/* Estilos CSS para o cabeçalho */
+header {
+    background-color: green; /* Cor de fundo azul */
+    color: white; /* Cor do texto branco */
+    padding: 20px 0; /* Espaçamento interno (20px no topo/bottom, 0 nas laterais) */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 4%;
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+    transition: background-color 0.3s ease; /* Transição suave de cor de fundo */
+}
+
+.h1{
+    margin: 50px;
+    color: blue;
+}
+/* Estilos CSS para o logo */
+.logo {
     font-size: 24px;
-    color: aliceblue;
-    font-weight: bolder;
+    margin-left: 20px; /* Espaçamento à esquerda */
+    width: 5%;
+    height: 5%;
+}
+
+/* Estilos CSS para a barra de navegação responsiva (hamburguer) */
+.menu-icon {
+    display: none; /* Esconde por padrão em telas maiores */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+}
+
+/* Estilos CSS para o menu */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+}
+
+.menu li {
     margin-right: 20px;
-    text-shadow: 5px 5px 5px: color black;
+}
+
+/* Estilos CSS para links no menu */
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease; /* Transição suave de cor do texto */
+}
+
+/* Estilos para a barra de navegação responsiva em telas menores */
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none; /* Esconde o menu principal em telas menores */
+        flex-direction: column;
+        background-color: green;
+        position: absolute;
+        top: 60px; /* Altura do cabeçalho fixo */
+        right: 0;
+        left: 0;
+    }
+
+    .menu.show {
+        display: flex; /* Mostra o menu quando o ícone é clicado */
+    }
+
+    .menu-icon {
+        display: flex; /* Mostra o ícone do menu em telas menores */
+    }
+}
+
+/* Estilos para o menu responsivo aberto */
+.menu.show a {
+    color: #fff;
 }
 
 .logoico{
-    width: 30%;
+    width: 5%
 }
 
-.propaganda{
-    height: 500px;
-    background-color: black;
-    background: url("formiga.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 50%;
+/* Estilos adicionais para a transição de cor de fundo do cabeçalho */
+header:hover {
+    background-color: green;
 }
 
-.logo-texto{
-    width: 30%
-  background-position: 50% 
+
+/* Estilos para o container do slider */
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Estilos para o slider */
+.slider {
+    width: 300%; /* Largura total é 3 vezes a largura de uma imagem */
+    display: flex;
+    transition: transform 0.5s ease; /* Efeito de transição suave */
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos para a seção de produtos */
+.products {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+}
+
+/* Estilos para cada produto */
+.product {
+    text-align: center;
+    max-width: 200px;
+    margin: 20px;
+}
+
+.product img {
+    max-width: 100%;
+    border-radius: 50%; /* Formato circular */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); /* Sombra suave */
+}
+
+.product h3 {
+    margin: 10px 0;
+}
+
+.product p {
+    color: black;
+}
+
+.product button {
+    background-color: green;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product button:hover {
+    background-color: green;
+}
+
+
+/* Estilos para o footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Quebra para uma única coluna em telas menores */
+}
+
+/* Estilos para cada seção do footer */
+.footer-section {
+    flex: 1;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.footer-section h2 {
+    font-size: 24px;
+}
+
+.footer-section p {
+    font-size: 16px;
+}
+
+/* Estilos para o formulário de cadastro */
+.footer-section form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.footer-section input[type="text"],
+.footer-section input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.footer-section button {
+    background-color: green;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer-section button:hover {
+    background-color: #2980b9;
 }
