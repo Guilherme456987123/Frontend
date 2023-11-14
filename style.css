@@ -17,7 +17,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
+    position: relative;
     width: 100%;
     height: 4%;
     z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
@@ -45,8 +45,8 @@ header {
 
 .bar {
     width: 25px;
-    height: 3px;
-    background-color: #fff;
+    height: 6px;
+    background-color: white;
     margin: 3px 0;
 }
 
@@ -98,8 +98,14 @@ nav {
     color: #fff;
 }
 
-.logoico{
-    width: 5%
+.logo-container {
+    margin-right: 20px; /* Adiciona espaço entre a logo e o texto no header */
+}
+
+.logo-container img {
+    max-height: 70px;
+    width: auto; 
+    
 }
 
 /* Estilos adicionais para a transição de cor de fundo do cabeçalho */
@@ -118,13 +124,16 @@ header:hover {
 /* Estilos para o slider */
 .slider {
     width: 300%; /* Largura total é 3 vezes a largura de uma imagem */
-    display: flex;
-    transition: transform 0.5s ease; /* Efeito de transição suave */
+    display: flex; 
+    transition: transform 3s ease-in-out; /* Efeito de transição suave */
+   height: 90%;
+    align-items: center;
+    transform: translateY(-20px);
 }
 
 .slider img {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 /* Estilos para a seção de produtos */

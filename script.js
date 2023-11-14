@@ -3,8 +3,13 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentIndex = 0;
 
     function nextSlide() {
-        currentIndex = (currentIndex + 1) % 3; // 3 é o número total de imagens
+        currentIndex = (currentIndex + 1) % 4; // 4 é o número total de imagens
         updateSlider();
+
+        // Adicionado verificação para reiniciar quando chegar à última imagem
+        if (currentIndex === 0) {
+            resetSlider();
+        }
     }
 
     function updateSlider() {
@@ -12,9 +17,10 @@ document.addEventListener("DOMContentLoaded", function () {
         slider.style.transform = `translateX(${translateValue}%)`;
     }
 
-    setInterval(nextSlide, 3000); // Mude para a próxima imagem a cada 3 segundos
-});
-// Exemplo de coordenadas para a cidade de Nova York
-const latitude = 40.7128;
-const longitude = -74.0060;
+    function resetSlider() {
+        currentIndex = 0;
+        updateSlider();
+    }
 
+    const sliderInterval = setInterval(nextSlide, 3000); // Mude para a próxima imagem a cada 3 segundos
+});
