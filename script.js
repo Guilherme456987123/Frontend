@@ -3,10 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentIndex = 0;
 
     function nextSlide() {
-        currentIndex = (currentIndex + 1) % 4; // 4 é o número total de imagens
+        currentIndex = (currentIndex + 1) % 4;
         updateSlider();
 
-        // Adicionado verificação para reiniciar quando chegar à última imagem
         if (currentIndex === 0) {
             resetSlider();
         }
@@ -22,5 +21,5 @@ document.addEventListener("DOMContentLoaded", function () {
         updateSlider();
     }
 
-    const sliderInterval = setInterval(nextSlide, 3000); // Mude para a próxima imagem a cada 3 segundos
+    const sliderInterval = setInterval(nextSlide, 5000); 
 });
